@@ -37,12 +37,9 @@ module pidike1() {
   translate([5,0,-3])cube([60,8,6],true);
   translate([37,0,-5])cube([10,8,4],true);
   translate([-3,0,-2])cube([65,10,4],true);
-  translate([-38.5,0,-0.6])cube([15,8,6],true);
-  translate([-33,0,4]) difference() {
-    cube([8,8,3],true);
-    translate([7,0,1]) rotate([0,70,0]) cube(9,true);
-  }
-  translate([41,0,0]) cube([6,8,14],true);
+  translate([-38.5,0,0])rotate([0,0,0])cube([15,8,8],true);
+  translate([-33,0,3]) difference() { cube([12,8,2],true);  translate([7,0,1]) rotate([0,70,0]) cube(9,true); }
+  translate([43,0,0]) cube([10,8,14],true);
   translate([2,0,-6]) cube([40,10,9],true);
   difference(){
     translate([-30,0,-22]) rotate([0,90,0]) cylinder(d=25,h=65);
@@ -56,11 +53,11 @@ module  pidike()  difference(){
   pidike1();
   $fn=20;
   //  translate([-25,0,-3]) rotate([0,90,0])cylinder(d=3,h=70,true,);
-  translate([-42,-5,12]) rotate([0,70,0]) cube(10);
-  translate([37,-5,8]) rotate([0,30,0]) cube(10);
+  translate([37,-5,8]) rotate([0,30,0]) cube(14);
+  translate([-50,-5,8]) rotate([0,70,0]) cube([10,10,20]);
 }
 
-//translate([36,0,36])rotate([0,90,0])
+translate([36,0,36])rotate([0,90,0])
 kela();
 color("RED")
 pidike();
